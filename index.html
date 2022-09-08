@@ -28,10 +28,14 @@
         </a>
         <a href="#" class="icon-a">
             <i class="fa fa-shopping-bag icons"></i>
-            &nbsp;&nbsp;Inventory
+            &nbsp;&nbsp;Orders
         </a>
         <a href="#" class="icon-a">
             <i class="fa fa-tasks icons"></i>
+            &nbsp;&nbsp;Inventory
+        </a>
+        <a href="#" class="icon-a">
+            <i class="fa fa-user icons"></i>
             &nbsp;&nbsp;Accounts
         </a>
         <a href="#" class="icon-a">
@@ -62,8 +66,8 @@
                 <p>
                     1245 <br>
                     <span>Customer</span>
-                    <i class="fa fa-users box-icon"></i>
                 </p>
+                <i class="fa fa-users box-icon"></i>
             </div>
         </div>
         <div class="col-div-3">
@@ -71,8 +75,8 @@
                 <p>
                     9000 <br>
                     <span>Projects</span>
-                    <i class="fa fa-list box-icon"></i>
                 </p>
+                <i class="fa fa-list box-icon"></i>
             </div>
         </div>
         <div class="col-div-3">
@@ -80,8 +84,8 @@
                 <p>
                     12,000 <br>
                     <span>Orders</span>
-                    <i class="fa fa-shopping-bag box-icon"></i>
                 </p>
+                <i class="fa fa-shopping-bag box-icon"></i>
             </div>
         </div>
         <div class="col-div-3">
@@ -89,8 +93,8 @@
                 <p>
                     13 <br>
                     <span>Tasks</span>
-                    <i class="fa fa-tasks box-icon"></i>
                 </p>
+                <i class="fa fa-tasks box-icon"></i>
             </div>
         </div>
         <div class="clearfix"></div>
@@ -140,8 +144,14 @@
                 <div class="content-box">
                     <p>Total Sale <span>Sell All</span></p>
                     <div class="circle-wrap">
-                        <div class="mask-full">
-                            <div class="fill"></div>
+                        <div class="circle">
+                            <div class="mask full">
+                                <div class="fill"></div>
+                            </div>
+                            <div class="mask half">
+                                <div class="fill"></div>
+                            </div>
+                            <div class="inside-circle">75%</div>
                         </div>
                         <div class="mask-half">
                             <div class="fill"></div>
@@ -158,6 +168,27 @@
     <script>
         $(".nav").click( () => {
             console.log('Diste click')
+            $("#mySidenav").css('width', '70px')
+            $('.main').css('margin-left', '70px')
+            $(".logo").css('visibility', 'hidden')
+            $(".logo span").css('visibility', 'visible')
+            $(".logo span").css('margin-left', '-18px')
+            $(".icon-a").css('visibility', 'hidden')
+            $(".icons").css('visibility', 'visible')
+            $(".icons").css('margin-left', '-10px')
+            $(".nav").css('display', 'none')
+            $(".nav2").css('display', 'block')
+            })
+            $(".nav2").click( () => {
+            console.log('Diste click en nav2')
+            $("#mySidenav").css('width', '300px')
+            $('.main').css('margin-left', '300px')
+            $(".logo").css('visibility', 'visible')
+            $(".logo span").css('visibility', 'visible')
+            $(".icon-a").css('visibility', 'visible')
+            $(".icons").css('visibility', 'visible')
+            $(".nav2").css('display', 'none')
+            $(".nav").css('display', 'block')
             })
     </script>
 </body>
